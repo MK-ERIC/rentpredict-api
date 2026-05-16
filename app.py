@@ -266,4 +266,5 @@ if __name__ == '__main__':
     print("  Running at: http://127.0.0.1:5000")
     print(f"  Model: {MODEL_NAME}")
     print("=" * 55 + "\n")
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+app.run(debug=False, host='0.0.0.0', port=port)
